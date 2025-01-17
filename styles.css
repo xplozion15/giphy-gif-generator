@@ -22,10 +22,21 @@ body {
   gap: 5px;
 }
 
-.gif-image {
+
+#gif-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
-  width: 50vh;
+  width: 520vh;
   height: 50vh;
+}
+
+
+.gif-image {
+  width: 49vh;
+  height: 49vh;
 }
 
 
@@ -74,3 +85,28 @@ h1 {
   position: absolute;
   bottom: 0;
 }
+
+.loader {
+  visibility: hidden;
+  
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 10px;
+  width: 20vh;
+  height: 20vh;
+  }
+
+  
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 

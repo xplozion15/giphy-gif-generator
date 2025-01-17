@@ -1,6 +1,7 @@
 const img = document.querySelector(".gif-image");
 const searchIcon = document.querySelector("#search-icon");
 let searchInput = document.querySelector("#search-input");
+const loader = document.querySelector(".loader");
 
 function useFetchApi(url) {
   fetch(url, { mode: "cors" })
@@ -12,11 +13,14 @@ function useFetchApi(url) {
 
       if (response.data && Object.keys(response.data).length !== 0) {
         img.src = response.data.images.original.url;
+        loader.replaceWith(img);
       } else {
+        loader.replaceWith(img);
         img.src = "./images/cat-gif.gif";
       }
     })
     .catch((err) => {
+      loader.replaceWith(img);
       img.src = "./images/cat-gif.gif";
     });
 }
@@ -42,6 +46,8 @@ searchIcon.addEventListener("click", () => {
 
 searchInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
+    img.replaceWith(loader)
+    loader.style.visibility = "visible";
     let baseUrl =
       "https://api.giphy.com/v1/gifs/random?api_key=MUzjBZUJN1WQ7PnlpYY6uH4OLET8rAJL&tag=";
     let tagQuery = searchInput.value.trim();
