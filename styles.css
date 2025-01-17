@@ -74,7 +74,7 @@ body {
   .attr-image {
     width: 25vw;
     height: 5vh;
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
 
@@ -101,4 +101,3 @@ body {
     } 
 
 
-    
