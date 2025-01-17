@@ -32,6 +32,8 @@ useFetchApi(
 
 //search icon event listener//
 searchIcon.addEventListener("click", () => {
+  img.replaceWith(loader);
+  loader.style.visibility = "visible";
   let baseUrl =
     "https://api.giphy.com/v1/gifs/random?api_key=MUzjBZUJN1WQ7PnlpYY6uH4OLET8rAJL&tag=";
   let tagQuery = searchInput.value.trim();
@@ -46,7 +48,7 @@ searchIcon.addEventListener("click", () => {
 
 searchInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
-    img.replaceWith(loader)
+    img.replaceWith(loader);
     loader.style.visibility = "visible";
     let baseUrl =
       "https://api.giphy.com/v1/gifs/random?api_key=MUzjBZUJN1WQ7PnlpYY6uH4OLET8rAJL&tag=";
