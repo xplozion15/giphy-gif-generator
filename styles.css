@@ -1,6 +1,6 @@
 * {
- 
-  font-family: 'PressStart2P-Regular','Courier New', Courier, monospace;
+
+  font-family: 'PressStart2P-Regular', 'Courier New', Courier, monospace;
 }
 
 @font-face {
@@ -12,93 +12,65 @@
 
 
 body {
-    background-color: #8d99ae;
-    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239800a1' fill-opacity='0.22'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    display: flex;
-    flex-direction: column;
-    /* height: 90vh;
-     */
-     min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  .gif-image {
-    /* padding: 10px; */
-    margin: 10px;
-    width: 50vh;
-    height: 50vh;
-  }
-  
-  
-  h1 {
-    align-self: center;
-    font-weight: 800;
-    font-family: 'PressStart2P-Regular','Courier New', Courier, monospace;
-    font-size: 30px;
-    text-align: center;
-    background-color: #023047;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-  }
+  background-color: #8d99ae;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239800a1' fill-opacity='0.22'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+}
 
-  
-  
-  #search-div {
-    display: flex;
-    border: 5px solid #023047;
-    width: 40vh;
-  }
-  
-  #search-icon {
-    height: 45px;
-    width: 15%;
-    background-color: #023047;
-    display: flex;
-  }
-
-  #search-icon:hover {
-    cursor: pointer;
-  }
+.gif-image {
+  margin: 10px;
+  width: 50vh;
+  height: 50vh;
+}
 
 
-  #search-input {
-    width: 85%;
-    color: #023047;
-    padding-left: 10px;
-  }
+h1 {
+  align-self: center;
+  font-weight: 800;
+  font-family: 'PressStart2P-Regular', 'Courier New', Courier, monospace;
+  font-size: 30px;
+  text-align: center;
+  background-color: #023047;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
 
 
-  .attr-image {
-    width: 25vw;
-    height: 4vh;
-     position : fixed;
-    top:0;
-  }
+
+#search-div {
+  display: flex;
+  border: 5px solid #023047;
+  width: 40vh;
+}
+
+#search-icon {
+  height: 45px;
+  width: 15%;
+  background-color: #023047;
+  display: flex;
+}
+
+#search-icon:hover {
+  cursor: pointer;
+}
 
 
-  
-  .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
-
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+#search-input {
+  width: 85%;
+  color: #023047;
+  padding-left: 10px;
+}
 
 
-    
+.attr-image {
+  width: 25vw;
+  height: 7vh;
+  position: absolute;
+  bottom: 0;
+}
