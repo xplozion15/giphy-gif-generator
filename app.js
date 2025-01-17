@@ -1,8 +1,8 @@
-const img = document.querySelector("img");
+const img = document.querySelector(".gif-image");
 //
 
 fetch(
-  "https://api.giphy.com/v1/gifs/random?api_key=QYDcK66FzounkHbq2pLGzUetmZ9Gyhz&s&tag=cats",
+  "https://api.giphy.com/v1/gifs/random?api_key=QYDcK66FzounkHbq2pLGzUetmZ9GyzyH<remove>&tag=cats",
   { mode: "cors" }).then((response)=>{
     return response.json();}
 ).then((response) => {
