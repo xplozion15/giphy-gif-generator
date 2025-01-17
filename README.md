@@ -4,6 +4,10 @@ Learnt how to use promises in javascript!
 
 ### Credits:
 
+## Acknowledgments
+- This project uses the [Giphy API](https://developers.giphy.com/) to fetch GIFs. Content is "Powered by Giphy".
+
+
 [Giphy GIF Generator live link](https://abhilash15500.github.io/giphy-gif-generator/)
 
 
