@@ -14,14 +14,17 @@ function useFetchApi(url) {
       if (response.data && Object.keys(response.data).length !== 0) {
         img.src = response.data.images.original.url;
         loader.replaceWith(img);
+        loader.style.visibility = "hidden";
       } else {
         loader.replaceWith(img);
         img.src = "./images/cat-gif.gif";
+        loader.style.visibility = "hidden";
       }
     })
     .catch((err) => {
       loader.replaceWith(img);
       img.src = "./images/cat-gif.gif";
+      loader.style.visibility = "hidden";
     });
 }
 
@@ -32,6 +35,7 @@ useFetchApi(
 
 //search icon event listener//
 searchIcon.addEventListener("click", () => {
+  if (loader.style.visibility === "visible") return;
   img.replaceWith(loader);
   loader.style.visibility = "visible";
   let baseUrl =
@@ -47,6 +51,7 @@ searchIcon.addEventListener("click", () => {
 });
 
 searchInput.addEventListener("keydown", function (event) {
+  if (loader.style.visibility === "visible") return;
   if (event.key === "Enter") {
     img.replaceWith(loader);
     loader.style.visibility = "visible";
