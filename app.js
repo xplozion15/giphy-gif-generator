@@ -3,30 +3,53 @@ const searchIcon = document.querySelector("#search-icon");
 let searchInput = document.querySelector("#search-input");
 const loader = document.querySelector(".loader");
 
-function useFetchApi(url) {
-  fetch(url, { mode: "cors" })
-    .then((response) => {
-      return response.json();
-    })
-    .then((response) => {
-      console.log(response);
+//async function
 
-      if (response.data && Object.keys(response.data).length !== 0) {
-        img.src = response.data.images.original.url;
-        loader.replaceWith(img);
-        loader.style.visibility = "hidden";
-      } else {
-        loader.replaceWith(img);
-        img.src = "./images/cat-gif.gif";
-        loader.style.visibility = "hidden";
-      }
-    })
-    .catch((err) => {
+async function useFetchApi(url) {
+  try {
+    const response = await fetch(url, { mode: "cors" });
+
+  const catData = await response.json();
+    if (catData.data && Object.keys(catData.data).length !== 0) {
+      img.src = catData.data.images.original.url;
+      loader.replaceWith(img);
+      loader.style.visibility = "hidden";
+    } else {
       loader.replaceWith(img);
       img.src = "./images/cat-gif.gif";
       loader.style.visibility = "hidden";
-    });
+    }
+  } catch (error) {
+    loader.replaceWith(img);
+    img.src = "./images/cat-gif.gif";
+    loader.style.visibility = "hidden";
+  }
 }
+
+// function useFetchApi(url) {
+//   fetch(url, { mode: "cors" })
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((response) => {
+//       console.log(response);
+
+//       if (response.data && Object.keys(response.data).length !== 0) {
+//         img.src = response.data.images.original.url;
+//         loader.replaceWith(img);
+//         loader.style.visibility = "hidden";
+//       } else {
+//         loader.replaceWith(img);
+//         img.src = "./images/cat-gif.gif";
+//         loader.style.visibility = "hidden";
+//       }
+//     })
+//     .catch((err) => {
+//       loader.replaceWith(img);
+//       img.src = "./images/cat-gif.gif";
+//       loader.style.visibility = "hidden";
+//     });
+// }
 
 // initialize the app
 useFetchApi(
