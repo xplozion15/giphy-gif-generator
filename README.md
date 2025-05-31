@@ -8,7 +8,7 @@ Learnt how to use promises in javascript!
 
 
 
-[Giphy GIF Generator live link](https://abhilash15500.github.io/giphy-gif-generator/)
+[Giphy GIF Generator live link](https://xplozion15.github.io/giphy-gif-generator/)
 
 
 - This project uses the [Giphy API](https://developers.giphy.com/) to fetch GIFs. Content is "Powered by Giphy".
